@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoanController;
+use App\Http\Controllers\PrestamoController;
+use App\Models\Prestamo;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +19,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Module books
+
+
+Route::post('/prestamos/search','PrestamoController@postBookSearch')->name('book_search');
+
+Route::resource('prestamos',PrestamoController::class);
