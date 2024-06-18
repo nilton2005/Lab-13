@@ -18,7 +18,19 @@ class BookFactory extends Factory
             'titulo' => $this->faker->sentence,
             'autor'  => $this->faker->name,
             'año'    => $this->faker->year,
-            'editorial' => $this->faker->company
+            'editorial' =>$this->faker->sentence,
+            'gender' => $this->faker->randomElement([
+            'Novela de ficción',
+            'No ficción',
+            'Ciencia ficción',
+            'Fantasía',
+            'Misterio y suspenso',
+            'Romance',
+            'Aventura',
+            'Historia',
+            'Biografía',
+            'Autoayuda'
+            ])
         ];
     }
 }

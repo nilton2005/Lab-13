@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoanController;
 use App\Http\Controllers\PrestamoController;
 use App\Models\Prestamo;
+use App\Http\Controllers\UserController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +25,14 @@ Route::get('/', function () {
 // Module books
 
 
-Route::post('/prestamos/search','PrestamoController@postBookSearch')->name('book_search');
-
 Route::resource('prestamos',PrestamoController::class);
+
+Route::get('/prestamos/create/login', [UserController::class, 'getLogin'])->name('login');
+Route::post('/prestamos/create/login', [UserController::class, 'postLogin'])->name('login');
+
+
+Route::get('/prestamos/create/register',[UserController::class,'getRegister'])->name('register');
+Route::post('/prestamos/create/register',[UserController::class,'postRegister'])->name('register');
+Route::get('/logout', [UserController::class,'getLogout']);
+
+Route::post('prestamos/create/search',[PrestamoController::class,'postProductSearch']);
