@@ -36,3 +36,7 @@ Route::post('/prestamos/create/register',[UserController::class,'postRegister'])
 Route::get('/logout', [UserController::class,'getLogout']);
 
 Route::post('prestamos/create/search',[PrestamoController::class,'postProductSearch']);
+
+//Esto es del mejor programador de un cuarto de 4*4<!-elpepe->
+
+//https://github.com/nilton2005/Lab-13.git
