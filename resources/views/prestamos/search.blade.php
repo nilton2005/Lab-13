@@ -48,7 +48,7 @@
                         <th>ID</th>
                         <th>Titulo</th>
                         <th>Año</th>
-                        <th>Estado</th>
+                        <th>Estado nfghf</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
